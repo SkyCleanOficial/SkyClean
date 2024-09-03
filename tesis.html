@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Cleaner</title>
+    <link rel="stylesheet" href="tesis.css">
+</head>     
+<body>
+    <header>
+        <h1>Sky Cleaner</h1>
+        <div class="logo-img">
+        <img src="imagenes/logo.jpg" alt="logo">
+        </div>
+        <nav>
+            <a href="información sobre nosotros.html"><button>información sobre nosotros</button></a>
+            <a href="hablanos.html"><button>Háblanos</button></a>
+        </nav>
+    </header>
+
+    <center><h1>Somos  :   </h1></center>
+
+    <section class="carousel">
+        <div class="carousel-images">
+            <img src="imagenes/producto1.jpg" alt="Producto 1" class="active">
+            <img src="imagenes/producto2.jpg" alt="Producto 2">
+            <img src="imagenes/producto3.jpg" alt="Producto 3">
+        </div>
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sky Cleaner. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+
+        function changeImage(direction) {
+            const images = document.querySelectorAll('.carousel-images img');
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+    </script>
+</body>
+</html>

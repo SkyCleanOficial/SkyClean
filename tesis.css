@@ -1,0 +1,99 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+.logo-img {
+    max-width: 300px;
+    width: 100%;
+    height: 400px;
+    margin-left:10px ;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 200px;
+    left: 450px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav button {
+    padding: 10px 15px;
+    border: none;
+    background-color: white;
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #e7e7e7;
+}
+
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    margin-top: 600px;
+}
+
+.carousel-images {
+    position: relative;
+}
+
+.carousel-images img {
+    width: 100%;
+    display: none;
+}
+
+.carousel-images img.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1; /* Permite que las secciones crezcan y empujen el footer hacia abajo */
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
